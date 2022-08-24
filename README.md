@@ -1,6 +1,6 @@
 # flutter_app_cat_happy
 
-A new Flutter project.
+> Projeto em desenvolvidomento
 
 ## Getting Started
 
