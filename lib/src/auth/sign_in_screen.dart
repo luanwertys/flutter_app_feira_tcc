@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_cat_happy/src/auth/components/custom_text_field.dart';
+import 'package:flutter_app_cat_happy/src/auth/components/custom_text_rich.dart';
 import 'package:flutter_app_cat_happy/src/auth/sing_up_screen.dart';
 import 'package:flutter_app_cat_happy/src/base/base_screen.dart';
 import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
@@ -10,10 +11,6 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const color2 = Color(
-      0xffFFFFFF,
-    );
-
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -30,39 +27,18 @@ class SignInScreen extends StatelessWidget {
                   children: [
                     //Nome da aplicação
                     const FittedBox(
-                      child: Text.rich(
-                        TextSpan(
-                          style: TextStyle(
-                            fontSize: 25,
-                          ),
-                          children: [
-                            TextSpan(
-                              text: 'Pet shop',
-                              style: TextStyle(
-                                  fontFamily: 'Muslish',
-                                  color: Color(0xff4E4D4B),
-                                  fontWeight: FontWeight.normal),
-                            ),
-                            TextSpan(
-                              text: ' Cat Happy',
-                              style: TextStyle(
-                                  fontFamily: 'Muslish',
-                                  color: Color(0xff100F0D),
-                                  fontWeight: FontWeight.normal),
-                            )
-                          ],
-                        ),
+                      child: CustomTextRich(
+                        fontsize: 30,
                       ),
                     ),
-
                     //Categorias
                     SizedBox(
                       height: 18,
                       child: DefaultTextStyle(
-                        style: const TextStyle(
+                        style: TextStyle(
                             fontSize: 16,
                             fontFamily: 'Mulish',
-                            color: Color(0xff4E4D4B)),
+                            color: CustomColors.customContrastColor),
                         child: AnimatedTextKit(
                           pause: Duration.zero,
                           repeatForever: true,
@@ -88,9 +64,9 @@ class SignInScreen extends StatelessWidget {
                   horizontal: 32,
                   vertical: 40,
                 ),
-                decoration: const BoxDecoration(
-                  color: color2,
-                  borderRadius: BorderRadius.vertical(
+                decoration: BoxDecoration(
+                  color: CustomColors.customContrastColor4,
+                  borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(50),
                   ),
                 ),
@@ -126,9 +102,10 @@ class SignInScreen extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18),
-                        )),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                        ),
                         onPressed: () {
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
@@ -138,11 +115,11 @@ class SignInScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const Text(
+                        child: Text(
                           'Entrar',
                           style: TextStyle(
                             fontSize: 18,
-                            color: color2,
+                            color: CustomColors.customContrastColor4,
                             fontFamily: 'Mulish',
                             fontWeight: FontWeight.w600,
                           ),
