@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_cat_happy/src/auth/sign_in_screen.dart';
+import 'package:flutter_app_cat_happy/src/pages/auth/sign_in_screen.dart';
 import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
 
 void main() {
