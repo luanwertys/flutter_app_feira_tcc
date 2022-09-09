@@ -18,6 +18,8 @@ abstract class CustomColors {
   static Color customContrastColor2 = const Color(0xff100F0D);
   static Color customContrastColor3 = const Color(0xffCE4A95);
   static Color customContrastColor4 = const Color(0xffFFFFFF);
+  static Color customContrastColor5 = const Color(0xffF8F8F8);
+  static Color customContrastColor6 = const Color(0xffEEEEEE);
 
   static MaterialColor customSwatchColor =
       MaterialColor(0xffCCDEE8, _swatchOpacity);

@@ -21,9 +21,10 @@ class CategoryTile extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 6,
+            vertical: 6,
           ),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(20),
             color: isSelected
                 ? CustomColors.customContrastColor3
                 : Colors.transparent,
@@ -35,7 +36,7 @@ class CategoryTile extends StatelessWidget {
                   ? CustomColors.customContrastColor4
                   : CustomColors.customContrastColor,
               fontWeight: FontWeight.bold,
-              fontSize: isSelected ? 16 : 14,
+              fontSize: isSelected ? 14 : 14,
             ),
           ),
         ),
