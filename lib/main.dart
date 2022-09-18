@@ -21,6 +21,11 @@ class MyApp extends StatelessWidget {
             backgroundColor: CustomColors.customContrastColor3,
           ),
         ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: TextButton.styleFrom(
+            primary: CustomColors.customContrastColor3,
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       home: const SignInScreen(),

@@ -21,9 +21,13 @@ class ItemTile extends StatelessWidget {
         // Conteúdo
         GestureDetector(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (c) {
-              return ProductScreen(item: item);
-            }));
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (c) {
+                  return ProductScreen(item: item);
+                },
+              ),
+            );
           },
           child: Card(
             elevation: 1,

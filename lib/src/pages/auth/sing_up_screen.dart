@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_cat_happy/src/pages/auth/components/custom_text_field.dart';
+import 'package:flutter_app_cat_happy/src/pages/commom_widgets/custom_text_field.dart';
 import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
 import 'package:flutter_app_cat_happy/src/pages/home/home_tab.dart';
 
+import '../cart/cart_tab.dart';
+import '../profile/profile_tab.dart';
+
 class BaseScreen extends StatefulWidget {
   const BaseScreen({Key? key}) : super(key: key);
 
@@ -20,15 +23,11 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
           const HomeTab(),
-          Container(
-            color: Colors.red,
-          ),
+          const CartTab(),
           Container(
             color: Colors.green,
           ),
-          Container(
-            color: Colors.blue,
-          ),
+          const ProfileTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -67,7 +66,7 @@ class _BaseScreenState extends State<BaseScreen> {
             icon: Icon(
               Icons.person_sharp,
             ),
-            label: 'Carrinho',
+            label: 'Perfil',
           ),
         ],
       ),
