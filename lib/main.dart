@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white.withAlpha(190),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: TextButton.styleFrom(
+            primary: CustomColors.customContrastColor4,
             backgroundColor: CustomColors.customContrastColor3,
           ),
         ),

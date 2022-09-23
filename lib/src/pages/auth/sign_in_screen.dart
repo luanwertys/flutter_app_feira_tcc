@@ -19,193 +19,201 @@ class SignInScreen extends StatelessWidget {
         child: SizedBox(
           height: size.height,
           width: size.width,
-          child: Column(
+          child: Stack(
             children: [
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    //Nome da aplicação
-                    const FittedBox(
-                      child: CustomTextRich(
-                        fontsize: 30,
-                      ),
-                    ),
-                    //Categorias
-                    SizedBox(
-                      height: 18,
-                      child: DefaultTextStyle(
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Mulish',
-                            color: CustomColors.customContrastColor),
-                        child: AnimatedTextKit(
-                          pause: Duration.zero,
-                          repeatForever: true,
-                          animatedTexts: [
-                            FadeAnimatedText('Ração'),
-                            FadeAnimatedText('Petiscos'),
-                            FadeAnimatedText('Areias e Banhos'),
-                            FadeAnimatedText('Arranhadores e Brinquedos'),
-                            FadeAnimatedText('Famárcia'),
-                            FadeAnimatedText('E muitos mais :)'),
-                          ],
+              Column(
+                children: [
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        //Nome da aplicação
+                        const FittedBox(
+                          child: CustomTextRich(
+                            fontsize: 30,
+                          ),
                         ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
-              // formulário basic
-              Container(
-                height: 670,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 32,
-                  vertical: 40,
-                ),
-                decoration: BoxDecoration(
-                  color: CustomColors.customContrastColor4,
-                  borderRadius: const BorderRadius.vertical(
-                    top: Radius.circular(50),
+                        //Categorias
+                        SizedBox(
+                          height: 18,
+                          child: DefaultTextStyle(
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Mulish',
+                                color: CustomColors.customContrastColor),
+                            child: AnimatedTextKit(
+                              pause: Duration.zero,
+                              repeatForever: true,
+                              animatedTexts: [
+                                FadeAnimatedText('Ração'),
+                                FadeAnimatedText('Petiscos'),
+                                FadeAnimatedText('Areias e Banhos'),
+                                FadeAnimatedText('Arranhadores e Brinquedos'),
+                                FadeAnimatedText('Famárcia'),
+                                FadeAnimatedText('E muitos mais :)'),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SizedBox(
-                      height: 200,
-                      width: 200,
-                      child: Image.asset('assets/images/logo.jpeg'),
-                    ),
-                    Container(
-                      height: 10,
-                    ),
 
-                    //email
-                    const CustomTextField(
-                      icon: Icons.email,
-                      label: 'E-mail',
-                      textInputType: TextInputType.emailAddress,
-                      textInputAction: TextInputAction.next,
+                  // formulário basic
+                  Container(
+                    height: 670,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 32,
+                      vertical: 40,
                     ),
-
-                    //senha
-                    const CustomTextField(
-                      icon: Icons.lock,
-                      label: 'Senha',
-                      isSecret: true,
-                      textInputAction: TextInputAction.done,
-                    ),
-                    // Botão de entrar
-                    SizedBox(
-                      height: 50,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18),
-                          ),
-                        ),
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (c) {
-                                return const BaseScreen();
-                              },
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'Entrar',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: CustomColors.customContrastColor4,
-                            fontFamily: 'Mulish',
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                    decoration: BoxDecoration(
+                      color: CustomColors.customContrastColor4,
+                      borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(50),
                       ),
                     ),
-
-                    //Botão de esqueceu a senha
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          'Esqueceu a senha ?',
-                          style: TextStyle(
-                            fontFamily: 'Mulish',
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: Color(0xff597C8F),
-                          ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Container(
+                          height: 120,
                         ),
-                      ),
-                    ),
 
-                    // Divisor
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 10),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Divider(
-                              color: Colors.grey.withAlpha(90),
-                              thickness: 2,
+                        //email
+                        const CustomTextField(
+                          icon: Icons.email,
+                          label: 'E-mail',
+                          textInputType: TextInputType.emailAddress,
+                          textInputAction: TextInputAction.next,
+                        ),
+
+                        //senha
+                        const CustomTextField(
+                          icon: Icons.lock,
+                          label: 'Senha',
+                          isSecret: true,
+                          textInputAction: TextInputAction.done,
+                        ),
+                        // Botão de entrar
+                        SizedBox(
+                          height: 50,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18),
+                              ),
                             ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (c) {
+                                    return const BaseScreen();
+                                  },
+                                ),
+                              );
+                            },
                             child: Text(
-                              'Ou',
+                              'Entrar',
                               style: TextStyle(
-                                color: Color(0xff4E4D4B),
+                                fontSize: 18,
+                                color: CustomColors.customContrastColor4,
+                                fontFamily: 'Mulish',
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
-                          Expanded(
-                            child: Divider(
-                              color: Colors.grey.withAlpha(90),
-                              thickness: 2,
+                        ),
+
+                        //Botão de esqueceu a senha
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'Esqueceu a senha ?',
+                              style: TextStyle(
+                                fontFamily: 'Mulish',
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xff597C8F),
+                              ),
                             ),
                           ),
-                        ],
-                      ),
-                    ),
-
-                    // Criar nova conta
-                    SizedBox(
-                      height: 50,
-                      child: OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                            side: const BorderSide(
-                              width: 2,
-                              color: Color(0xffCE4A95),
-                            )),
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (c) {
-                                return SingUpScreen();
-                              },
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          'Criar conta',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0xffCE4A95),
-                              fontFamily: 'Mulish',
-                              fontWeight: FontWeight.w700),
                         ),
-                      ),
+
+                        // Divisor
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Divider(
+                                  color: Colors.grey.withAlpha(90),
+                                  thickness: 2,
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                child: Text(
+                                  'Ou',
+                                  style: TextStyle(
+                                    color: Color(0xff4E4D4B),
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Divider(
+                                  color: Colors.grey.withAlpha(90),
+                                  thickness: 2,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        // Criar nova conta
+                        SizedBox(
+                          height: 50,
+                          child: OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18),
+                                ),
+                                side: const BorderSide(
+                                  width: 2,
+                                  color: Color(0xffCE4A95),
+                                )),
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (c) {
+                                    return SingUpScreen();
+                                  },
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              'Criar conta',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Color(0xffCE4A95),
+                                  fontFamily: 'Mulish',
+                                  fontWeight: FontWeight.w700),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
+                ],
+              ),
+              Positioned(
+                top: 120,
+                left: 120,
+                child: SizedBox(
+                  height: 200,
+                  width: 200,
+                  child: Image.asset('assets/images/logo.jpeg'),
                 ),
               ),
             ],
