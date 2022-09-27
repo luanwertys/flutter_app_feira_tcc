@@ -9,6 +9,7 @@ class OrdersTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
         backgroundColor: CustomColors.customContrastColor3,
         title: Text(

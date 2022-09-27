@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
 
 class CustomTextRich extends StatelessWidget {
+  final Color? customTitleColor;
   final double fontsize;
   const CustomTextRich({
     required this.fontsize,
+    this.customTitleColor,
     Key? key,
   }) : super(key: key);
 
@@ -20,7 +22,7 @@ class CustomTextRich extends StatelessWidget {
             text: 'Pet shop',
             style: TextStyle(
               fontFamily: 'Muslish',
-              color: CustomColors.customContrastColor,
+              color: customTitleColor ?? CustomColors.customContrastColor,
               fontWeight: FontWeight.normal,
             ),
           ),

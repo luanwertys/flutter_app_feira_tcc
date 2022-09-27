@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_cat_happy/src/pages/auth/sign_in_screen.dart';
 import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
+import 'package:flutter_app_cat_happy/src/pages/auth/controller/auth_controller.dart';
+import 'package:flutter_app_cat_happy/src/pages_routes/app_pages.dart';
+import 'package:get/get.dart';
 
 void main() {
+  Get.put(AuthController());
+
   runApp(const MyApp());
 }
 
@@ -12,8 +16,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      title: 'PetShop TCC',
       theme: ThemeData(
+        backgroundColor: Colors.grey.shade100,
         primarySwatch: Colors.grey,
         scaffoldBackgroundColor: Colors.white.withAlpha(190),
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -29,7 +35,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SignInScreen(),
+      initialRoute: PagesRoutes.splashRoute,
+      getPages: AppPages.pages,
     );
   }
 }

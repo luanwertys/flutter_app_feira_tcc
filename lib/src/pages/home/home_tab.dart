@@ -1,10 +1,14 @@
+import 'package:add_to_cart_animation/add_to_cart_animation.dart';
+import 'package:add_to_cart_animation/add_to_cart_icon.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_cat_happy/src/pages/auth/components/custom_text_rich.dart';
+import 'package:flutter_app_cat_happy/src/pages/commom_widgets/custom_shimmer.dart';
+import 'package:flutter_app_cat_happy/src/pages/commom_widgets/custom_text_rich.dart';
 import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
 import 'package:flutter_app_cat_happy/src/pages/home/components/category_tile.dart';
 import 'package:flutter_app_cat_happy/src/config/app_data.dart' as app_data;
 import 'package:flutter_app_cat_happy/src/pages/home/components/item_tile.dart';
+import 'package:flutter_app_cat_happy/src/services/utils_services.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab({Key? key}) : super(key: key);
@@ -15,10 +19,35 @@ class HomeTab extends StatefulWidget {
 
 class _HomeTabState extends State<HomeTab> {
   String selectedCategorias = 'Ração';
+  GlobalKey<CartIconKey> globalKeyCarItens = GlobalKey<CartIconKey>();
+
+  late Function(GlobalKey) runAddTocardAnumation;
+
+  void itemSelectedCartAnimations(GlobalKey gkImage) {
+    runAddTocardAnumation(gkImage);
+  }
+
+  final UtilsServices utilsServices = UtilsServices();
+
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        setState(() {
+          isLoading = false;
+        });
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       // App bar
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -41,9 +70,12 @@ class _HomeTabState extends State<HomeTab> {
                     fontSize: 12,
                   ),
                 ),
-                child: Icon(
-                  Icons.shopping_cart_sharp,
-                  color: CustomColors.customContrastColor3,
+                child: AddToCartIcon(
+                  key: globalKeyCarItens,
+                  icon: Icon(
+                    Icons.shopping_cart_sharp,
+                    color: CustomColors.customContrastColor3,
+                  ),
                 ),
               ),
             ),
@@ -51,85 +83,128 @@ class _HomeTabState extends State<HomeTab> {
         ],
       ),
 
-      // input search
-
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 10,
-            ),
-            child: TextFormField(
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: CustomColors.customContrastColor4,
-                isDense: true,
-                hintText: 'Pesquise aqui',
-                hintStyle: TextStyle(
-                  color: CustomColors.customContrastColor.withOpacity(.5),
-                  fontSize: 14,
-                ),
-                prefixIcon: Icon(
-                  Icons.search,
-                  color: CustomColors.customSwatchColor,
-                  size: 28,
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(60),
-                  borderSide: const BorderSide(
-                    width: 0,
-                    style: BorderStyle.none,
+      body: AddToCartAnimation(
+        gkCart: globalKeyCarItens,
+        previewDuration: const Duration(microseconds: 100),
+        previewCurve: Curves.ease,
+        receiveCreateAddToCardAnimationMethod: (addToCartAnimationMethod) {
+          runAddTocardAnumation = addToCartAnimationMethod;
+        },
+        child: Column(
+          children: [
+            // input search
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 10,
+              ),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: CustomColors.customContrastColor4,
+                  isDense: true,
+                  hintText: 'Pesquise aqui',
+                  hintStyle: TextStyle(
+                    color: CustomColors.customContrastColor.withOpacity(.5),
+                    fontSize: 14,
+                  ),
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: CustomColors.customSwatchColor,
+                    size: 28,
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(60),
+                    borderSide: const BorderSide(
+                      width: 0,
+                      style: BorderStyle.none,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
 
-          // Categorias
-          Container(
-            padding: const EdgeInsets.only(
-              left: 25,
-            ),
-            height: 40,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (_, index) {
-                return CategoryTile(
-                  onPressed: () {
-                    setState(() {
-                      selectedCategorias = app_data.categorias[index];
-                    });
-                  },
-                  category: app_data.categorias[index],
-                  isSelected: app_data.categorias[index] == selectedCategorias,
-                );
-              },
-              separatorBuilder: (_, index) => const SizedBox(width: 10),
-              itemCount: app_data.categorias.length,
-            ),
-          ),
-
-          //List Grid
-          Expanded(
-            child: GridView.builder(
-              padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-              physics: const BouncingScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                childAspectRatio: 9 / 13.6,
+            // Categorias
+            Container(
+              padding: const EdgeInsets.only(
+                left: 25,
               ),
-              itemCount: app_data.items.length,
-              itemBuilder: (_, index) {
-                return ItemTile(
-                  item: app_data.items[index],
-                );
-              },
+              height: 40,
+              child: !isLoading
+                  ? ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (_, index) {
+                        return CategoryTile(
+                          onPressed: () {
+                            setState(() {
+                              selectedCategorias = app_data.categorias[index];
+                            });
+                          },
+                          category: app_data.categorias[index],
+                          isSelected:
+                              app_data.categorias[index] == selectedCategorias,
+                        );
+                      },
+                      separatorBuilder: (_, index) => const SizedBox(width: 10),
+                      itemCount: app_data.categorias.length,
+                    )
+                  : ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: List.generate(
+                        5,
+                        (index) => Container(
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.only(right: 12),
+                          child: CustomShimmer(
+                            height: 20,
+                            width: 80,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
             ),
-          ),
-        ],
+
+            //List Grid
+            Expanded(
+              child: !isLoading
+                  ? GridView.builder(
+                      padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+                      physics: const BouncingScrollPhysics(),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 10,
+                        crossAxisSpacing: 10,
+                        childAspectRatio: 9 / 13.6,
+                      ),
+                      itemCount: app_data.items.length,
+                      itemBuilder: (_, index) {
+                        return ItemTile(
+                          item: app_data.items[index],
+                          cartAnimationMethod: itemSelectedCartAnimations,
+                        );
+                      },
+                    )
+                  : GridView.count(
+                      padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+                      physics: const BouncingScrollPhysics(),
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10,
+                      childAspectRatio: 9 / 13.6,
+                      children: List.generate(
+                        10,
+                        (index) => CustomShimmer(
+                          height: double.infinity,
+                          width: double.infinity,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+            ),
+          ],
+        ),
       ),
     );
   }
