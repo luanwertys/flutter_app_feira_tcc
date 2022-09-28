@@ -5,6 +5,8 @@ import 'package:flutter_app_cat_happy/src/pages_routes/app_pages.dart';
 import 'package:get/get.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   Get.put(AuthController());
 
   runApp(const MyApp());

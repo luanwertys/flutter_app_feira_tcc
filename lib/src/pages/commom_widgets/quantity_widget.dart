@@ -3,11 +3,13 @@ import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
 
 class QuantityWidget extends StatelessWidget {
   final int value;
+  final String suffixText;
   final Function(int quantity) result;
   final bool isRemovable;
 
   const QuantityWidget({
     Key? key,
+    required this.suffixText,
     required this.value,
     required this.result,
     this.isRemovable = false,
@@ -49,7 +51,7 @@ class QuantityWidget extends StatelessWidget {
               horizontal: 6,
             ),
             child: Text(
-              '$value',
+              '$value$suffixText',
               style: const TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.bold,

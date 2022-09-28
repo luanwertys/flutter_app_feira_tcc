@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
         const Duration(
           seconds: 2,
         ), () {
-      Get.offAllNamed(PagesRoutes.singInRoute);
+      Get.offAllNamed(PagesRoutes.signInRoute);
     });
   }
 

@@ -55,7 +55,7 @@ class PaymentDialog extends StatelessWidget {
 
                 //Total
                 Text(
-                  'Total: ${utilsServices.princeTocurrncy(order.total)}',
+                  'Total: ${utilsServices.priceToCurrency(order.total)}',
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
 

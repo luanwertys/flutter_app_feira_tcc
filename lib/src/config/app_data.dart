@@ -1,8 +1,5 @@
 import 'package:flutter_app_cat_happy/src/models/item_model.dart';
-import 'package:flutter_app_cat_happy/src/models/order_model.dart';
 import 'package:flutter_app_cat_happy/src/models/user_model.dart';
-
-import '../models/cart_item_model.dart';
 
 ItemModel granplus = ItemModel(
   description:
@@ -69,25 +66,6 @@ List<String> categorias = [
   'Areias'
 ];
 
-List<CartItemModel> cartItens = [
-  CartItemModel(
-    item: granplus,
-    quantity: 2,
-  ),
-  CartItemModel(
-    item: golden1,
-    quantity: 1,
-  ),
-  CartItemModel(
-    item: golden2,
-    quantity: 4,
-  ),
-  CartItemModel(
-    item: premier,
-    quantity: 3,
-  ),
-];
-
 UserModel user = UserModel(
   name: 'Luan',
   email: 'a@2.com.br',
@@ -95,53 +73,3 @@ UserModel user = UserModel(
   cpf: '999.999.999-99',
   password: 'senha@123',
 );
-
-List<OrderModel> orders = [
-  //Pedido 01
-  OrderModel(
-    copyAndPaste: 'testeluan',
-    createdDateTime: DateTime.parse(
-      '2022-09-22 18:04:00.176',
-    ),
-    id: 'wwew22222dldldldld',
-    itens: [
-      CartItemModel(
-        item: racao1,
-        quantity: 2,
-      ),
-      CartItemModel(
-        item: golden1,
-        quantity: 1,
-      )
-    ],
-    overdueDateTime: DateTime.parse(
-      '2022-09-22 23:04:00.176',
-    ),
-    status: 'pending_payment',
-    total: 135.00,
-  ),
-
-  //Pedido 02
-  OrderModel(
-    copyAndPaste: 'testeluan',
-    createdDateTime: DateTime.parse(
-      '2022-09-22 18:40:00.176',
-    ),
-    id: 'llddldkffl202020',
-    itens: [
-      CartItemModel(
-        item: granplus,
-        quantity: 2,
-      ),
-      CartItemModel(
-        item: premier,
-        quantity: 1,
-      )
-    ],
-    overdueDateTime: DateTime.parse(
-      '2022-09-22 22:44:00.176',
-    ),
-    status: 'delivered',
-    total: 230.00,
-  )
-];
