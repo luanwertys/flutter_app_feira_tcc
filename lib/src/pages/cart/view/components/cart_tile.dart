@@ -50,14 +50,15 @@ class _CartTileState extends State<CartTile> {
         subtitle: Text(
           utilsServices.priceToCurrency(widget.cartItem.totalPrice()),
           style: TextStyle(
-            color: CustomColors.customSwatchColor,
+            color: CustomColors.customContrastColor3,
+            fontSize: 14,
             fontWeight: FontWeight.bold,
           ),
         ),
 
         // Quantidade
         trailing: QuantityWidget(
-          suffixText: widget.cartItem.item.unit,
+          suffixText: ' ',
           value: widget.cartItem.quantity,
           result: (quantity) {
             controller.changeItemQuantity(

@@ -22,7 +22,10 @@ class _CartTabState extends State<CartTab> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: CustomColors.customContrastColor3,
-        title: const Text('Carrinho'),
+        title: const Text(
+          'Carrinho',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Column(
         children: [
@@ -83,7 +86,7 @@ class _CartTabState extends State<CartTab> {
                       const Text(
                         'Total geral',
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 13,
                         ),
                       ),
                       GetBuilder<CartController>(
@@ -108,7 +111,7 @@ class _CartTabState extends State<CartTab> {
                     builder: (controller) {
                       return ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: CustomColors.customSwatchColor,
+                          primary: CustomColors.customContrastColor3,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),

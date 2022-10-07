@@ -13,7 +13,12 @@ class OrdersTab extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: CustomColors.customContrastColor3,
-        title: const Text('Pedidos'),
+        title: const Text(
+          'Pedidos',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
       body: GetBuilder<AllOrdersController>(
         builder: (controller) {

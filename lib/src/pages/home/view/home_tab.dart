@@ -212,7 +212,7 @@ class _HomeTabState extends State<HomeTab> {
                               crossAxisCount: 2,
                               mainAxisSpacing: 10,
                               crossAxisSpacing: 10,
-                              childAspectRatio: 9 / 11.5,
+                              childAspectRatio: 7.2 / 11.5,
                             ),
                             itemCount: controller.allProducts.length,
                             itemBuilder: (_, index) {
@@ -235,7 +235,7 @@ class _HomeTabState extends State<HomeTab> {
                           crossAxisCount: 2,
                           mainAxisSpacing: 10,
                           crossAxisSpacing: 10,
-                          childAspectRatio: 9 / 11.5,
+                          childAspectRatio: 7.2 / 11.5,
                           children: List.generate(
                             10,
                             (index) => CustomShimmer(
