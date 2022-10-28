@@ -11,7 +11,6 @@ class ItemModel {
 
   @JsonKey(name: 'picture')
   String imgUrl;
-
   String unit;
   double price;
   String description;

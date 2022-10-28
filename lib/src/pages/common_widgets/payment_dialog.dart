@@ -5,7 +5,6 @@ import 'package:greengrocer/src/services/utils_services.dart';
 
 class PaymentDialog extends StatelessWidget {
   final OrderModel order;
-
   PaymentDialog({
     Key? key,
     required this.order,
