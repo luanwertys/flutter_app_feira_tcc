@@ -1,9 +1,8 @@
-import 'package:greengrocer/src/constants/endpoints.dart';
-import 'package:greengrocer/src/models/user_model.dart';
-import 'package:greengrocer/src/pages/auth/respository/auth_errors.dart'
-    as authErrors;
-import 'package:greengrocer/src/pages/auth/result/auth_result.dart';
-import 'package:greengrocer/src/services/http_manager.dart';
+import 'package:tcc/src/constants/endpoints.dart';
+import 'package:tcc/src/models/user_model.dart';
+import 'package:tcc/src/pages/auth/respository/auth_errors.dart' as authErrors;
+import 'package:tcc/src/pages/auth/result/auth_result.dart';
+import 'package:tcc/src/services/http_manager.dart';
 
 class AuthRepository {
   final HttpManager _httpManager = HttpManager();

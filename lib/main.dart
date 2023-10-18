@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:greengrocer/src/pages/auth/controller/auth_controller.dart';
-import 'package:greengrocer/src/pages_routes/app_pages.dart';
+import 'package:tcc/src/pages/auth/controller/auth_controller.dart';
+import 'package:tcc/src/pages_routes/app_pages.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

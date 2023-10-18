@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:greengrocer/src/config/custom_colors.dart';
-import 'package:greengrocer/src/models/item_model.dart';
-import 'package:greengrocer/src/pages/cart/controller/cart_controller.dart';
-import 'package:greengrocer/src/pages_routes/app_pages.dart';
-import 'package:greengrocer/src/services/utils_services.dart';
+import 'package:tcc/src/config/custom_colors.dart';
+import 'package:tcc/src/models/item_model.dart';
+import 'package:tcc/src/pages/cart/controller/cart_controller.dart';
+import 'package:tcc/src/pages_routes/app_pages.dart';
+import 'package:tcc/src/services/utils_services.dart';
 
 class ItemTile extends StatefulWidget {
   final ItemModel item;

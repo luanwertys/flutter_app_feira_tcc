@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:greengrocer/src/models/cart_item_model.dart';
-import 'package:greengrocer/src/models/item_model.dart';
-import 'package:greengrocer/src/models/order_model.dart';
-import 'package:greengrocer/src/pages/auth/controller/auth_controller.dart';
-import 'package:greengrocer/src/pages/cart/cart_result/cart_result.dart';
-import 'package:greengrocer/src/pages/cart/repository/cart_repository.dart';
-import 'package:greengrocer/src/pages/common_widgets/payment_dialog.dart';
-import 'package:greengrocer/src/services/utils_services.dart';
+import 'package:tcc/src/models/cart_item_model.dart';
+import 'package:tcc/src/models/item_model.dart';
+import 'package:tcc/src/models/order_model.dart';
+import 'package:tcc/src/pages/auth/controller/auth_controller.dart';
+import 'package:tcc/src/pages/cart/cart_result/cart_result.dart';
+import 'package:tcc/src/pages/cart/repository/cart_repository.dart';
+import 'package:tcc/src/pages/common_widgets/payment_dialog.dart';
+import 'package:tcc/src/services/utils_services.dart';
 
 class CartController extends GetxController {
   final cartRepository = CartRepository();

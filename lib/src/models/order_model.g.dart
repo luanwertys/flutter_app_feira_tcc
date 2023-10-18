@@ -26,7 +26,7 @@ Map<String, dynamic> _$OrderModelToJson(OrderModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': instance.createdDateTime?.toIso8601String(),
-      'due': instance.overdueDateTime.toIso8601String(),
+      'dueDate': instance.overdueDateTime.toIso8601String(),
       'items': instance.items,
       'status': instance.status,
       'qrCodeImage': instance.qrCodeImage,

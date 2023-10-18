@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:greengrocer/src/models/category_model.dart';
-import 'package:greengrocer/src/models/item_model.dart';
-import 'package:greengrocer/src/pages/home/repository/home_repository.dart';
-import 'package:greengrocer/src/pages/home/result/home_result.dart';
-import 'package:greengrocer/src/services/utils_services.dart';
+import 'package:tcc/src/models/category_model.dart';
+import 'package:tcc/src/models/item_model.dart';
+import 'package:tcc/src/pages/home/repository/home_repository.dart';
+import 'package:tcc/src/pages/home/result/home_result.dart';
+import 'package:tcc/src/services/utils_services.dart';
 
 const int itemsPerPage = 6;
 

@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:greengrocer/src/models/item_model.dart';
+import 'package:tcc/src/models/item_model.dart';
 
 part 'category_model.g.dart';
 

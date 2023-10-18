@@ -3,14 +3,14 @@ import 'package:add_to_cart_animation/add_to_cart_icon.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:greengrocer/src/config/custom_colors.dart';
-import 'package:greengrocer/src/pages/base/controller/navigation_controller.dart';
-import 'package:greengrocer/src/pages/cart/controller/cart_controller.dart';
-import 'package:greengrocer/src/pages/common_widgets/app_name_widget.dart';
-import 'package:greengrocer/src/pages/common_widgets/custom_shimmer.dart';
-import 'package:greengrocer/src/pages/home/controller/home_controller.dart';
-import 'package:greengrocer/src/pages/home/view/components/category_tile.dart';
-import 'package:greengrocer/src/pages/home/view/components/item_tile.dart';
+import 'package:tcc/src/config/custom_colors.dart';
+import 'package:tcc/src/pages/base/controller/navigation_controller.dart';
+import 'package:tcc/src/pages/cart/controller/cart_controller.dart';
+import 'package:tcc/src/pages/common_widgets/app_name_widget.dart';
+import 'package:tcc/src/pages/common_widgets/custom_shimmer.dart';
+import 'package:tcc/src/pages/home/controller/home_controller.dart';
+import 'package:tcc/src/pages/home/view/components/category_tile.dart';
+import 'package:tcc/src/pages/home/view/components/item_tile.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab({Key? key}) : super(key: key);

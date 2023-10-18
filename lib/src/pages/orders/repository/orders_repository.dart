@@ -1,8 +1,8 @@
-import 'package:greengrocer/src/constants/endpoints.dart';
-import 'package:greengrocer/src/models/cart_item_model.dart';
-import 'package:greengrocer/src/models/order_model.dart';
-import 'package:greengrocer/src/pages/orders/orders_result/orders_result.dart';
-import 'package:greengrocer/src/services/http_manager.dart';
+import 'package:tcc/src/constants/endpoints.dart';
+import 'package:tcc/src/models/cart_item_model.dart';
+import 'package:tcc/src/models/order_model.dart';
+import 'package:tcc/src/pages/orders/orders_result/orders_result.dart';
+import 'package:tcc/src/services/http_manager.dart';
 
 class OrdersRepository {
   final _httpManager = HttpManager();
