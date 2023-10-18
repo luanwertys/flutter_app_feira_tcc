@@ -3,7 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
+<<<<<<< HEAD
 	objectVersion = 46;
+=======
+	objectVersion = 50;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -127,7 +131,11 @@
 		97C146E61CF9000F007C117D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+<<<<<<< HEAD
 				LastUpgradeCheck = 1020;
+=======
+				LastUpgradeCheck = 1300;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
@@ -290,8 +298,16 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+<<<<<<< HEAD
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.greengrocer;
+=======
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.luanwertys.flutterAppCatHappy;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -399,7 +415,12 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
+<<<<<<< HEAD
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+=======
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -414,8 +435,16 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+<<<<<<< HEAD
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.greengrocer;
+=======
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.luanwertys.flutterAppCatHappy;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -433,8 +462,16 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+<<<<<<< HEAD
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.greengrocer;
+=======
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.luanwertys.flutterAppCatHappy;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

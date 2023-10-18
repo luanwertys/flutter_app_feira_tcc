@@ -1,10 +1,20 @@
 import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:tcc/src/models/order_model.dart';
 import 'package:tcc/src/services/utils_services.dart';
 
 class PaymentDialog extends StatelessWidget {
   final OrderModel order;
+=======
+
+import '../../models/order_model.dart';
+import '../../services/utils_services.dart';
+
+class PaymentDialog extends StatelessWidget {
+  final OrderModel order;
+
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
   PaymentDialog({
     Key? key,
     required this.order,

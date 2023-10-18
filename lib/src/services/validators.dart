@@ -15,8 +15,13 @@ String? passwordValidator(password) {
     return 'Digite sua senha!';
   }
 
+<<<<<<< HEAD
   if (password.length < 6) {
     return 'Digite uma senha com pelos menos 6 caracteres.';
+=======
+  if (password.length < 7) {
+    return 'Digite uma senha com pelos menos 7 caracteres.';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
   }
 
   return null;
@@ -39,7 +44,11 @@ String? phoneValidator(String? phone) {
     return 'Digite um celular!';
   }
 
+<<<<<<< HEAD
   if (phone.length < 14 || !phone.isPhoneNumber) {
+=======
+  if (phone.length < 11 || !phone.isPhoneNumber) {
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
     return 'Digite um número válido!';
   }
 

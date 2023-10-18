@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:tcc/src/config/custom_colors.dart';
 import 'package:tcc/src/pages/cart/controller/cart_controller.dart';
 import 'package:tcc/src/pages/cart/view/components/cart_tile.dart';
 import 'package:tcc/src/services/utils_services.dart';
+=======
+
+import '../../../config/custom_colors.dart';
+import '../../../services/utils_services.dart';
+import '../controller/cart_controller.dart';
+import 'components/cart_tile.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class CartTab extends StatefulWidget {
   const CartTab({Key? key}) : super(key: key);
@@ -20,7 +28,15 @@ class _CartTabState extends State<CartTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: const Text('Carrinho'),
+=======
+        backgroundColor: CustomColors.customContrastColor3,
+        title: const Text(
+          'Carrinho',
+          style: TextStyle(color: Colors.white),
+        ),
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
       ),
       body: Column(
         children: [
@@ -34,8 +50,13 @@ class _CartTabState extends State<CartTab> {
                     children: [
                       Icon(
                         Icons.remove_shopping_cart,
+<<<<<<< HEAD
                         size: 40,
                         color: CustomColors.customSwatchColor,
+=======
+                        size: 50,
+                        color: CustomColors.customContrastColor,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                       ),
                       const Text('Não há itens no carrinho'),
                     ],
@@ -81,7 +102,11 @@ class _CartTabState extends State<CartTab> {
                       const Text(
                         'Total geral',
                         style: TextStyle(
+<<<<<<< HEAD
                           fontSize: 12,
+=======
+                          fontSize: 13,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                         ),
                       ),
                       GetBuilder<CartController>(
@@ -91,7 +116,11 @@ class _CartTabState extends State<CartTab> {
                                 .priceToCurrency(controller.cartTotalPrice()),
                             style: TextStyle(
                               fontSize: 23,
+<<<<<<< HEAD
                               color: CustomColors.customSwatchColor,
+=======
+                              color: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                               fontWeight: FontWeight.bold,
                             ),
                           );
@@ -106,7 +135,11 @@ class _CartTabState extends State<CartTab> {
                     builder: (controller) {
                       return ElevatedButton(
                         style: ElevatedButton.styleFrom(
+<<<<<<< HEAD
                           backgroundColor: CustomColors.customSwatchColor,
+=======
+                          primary: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),
@@ -131,6 +164,10 @@ class _CartTabState extends State<CartTab> {
                                 'Concluir pedido',
                                 style: TextStyle(
                                   fontSize: 18,
+<<<<<<< HEAD
+=======
+                                  color: Colors.white,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                                 ),
                               ),
                       );

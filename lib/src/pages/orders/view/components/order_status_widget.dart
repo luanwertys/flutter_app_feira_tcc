@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:tcc/src/config/custom_colors.dart';
+=======
+
+import '../../../../config/custom_colors.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class OrderStatusWidget extends StatelessWidget {
   final String status;

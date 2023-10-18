@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:tcc/src/models/cart_item_model.dart';
 import 'package:tcc/src/models/item_model.dart';
 import 'package:tcc/src/models/order_model.dart';
@@ -8,6 +9,17 @@ import 'package:tcc/src/pages/cart/cart_result/cart_result.dart';
 import 'package:tcc/src/pages/cart/repository/cart_repository.dart';
 import 'package:tcc/src/pages/common_widgets/payment_dialog.dart';
 import 'package:tcc/src/services/utils_services.dart';
+=======
+
+import '../../../models/cart_item_model.dart';
+import '../../../models/item_model.dart';
+import '../../../models/order_model.dart';
+import '../../../services/utils_services.dart';
+import '../../auth/controller/auth_controller.dart';
+import '../../commom_widgets/payment_dialog.dart';
+import '../cart_result/cart_result.dart';
+import '../repository/cart_repository.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class CartController extends GetxController {
   final cartRepository = CartRepository();

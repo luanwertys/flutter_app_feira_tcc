@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:get/get.dart';
 import 'package:tcc/src/pages/auth/controller/auth_controller.dart';
 import 'package:tcc/src/pages/common_widgets/custom_text_field.dart';
 import 'package:tcc/src/services/validators.dart';
+=======
+import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
+import 'package:get/get.dart';
+import '../../../../services/validators.dart';
+import '../../../commom_widgets/custom_text_field.dart';
+import '../../controller/auth_controller.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class ForgotPasswordDialog extends StatelessWidget {
   final emailController = TextEditingController();
@@ -74,9 +82,15 @@ class ForgotPasswordDialog extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
+<<<<<<< HEAD
                     side: const BorderSide(
                       width: 2,
                       color: Colors.green,
+=======
+                    side: BorderSide(
+                      width: 2,
+                      color: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                     ),
                   ),
                   onPressed: () {

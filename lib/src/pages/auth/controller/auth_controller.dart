@@ -98,7 +98,7 @@ class AuthController extends GetxController {
   Future<void> signUp() async {
     isLoading.value = true;
 
-    AuthResult result = await authRepository.signUp(user);
+    AuthResult result = await authRepository.singUp(user);
 
     isLoading.value = false;
 
@@ -124,7 +124,7 @@ class AuthController extends GetxController {
     isLoading.value = true;
 
     AuthResult result =
-        await authRepository.signIn(email: email, password: password);
+        await authRepository.singIn(email: email, password: password);
 
     isLoading.value = false;
 

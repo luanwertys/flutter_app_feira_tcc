@@ -89,6 +89,7 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
+<<<<<<< HEAD
             VALUE "CompanyName", "com.example" "\0"
             VALUE "FileDescription", "A new Flutter project." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
@@ -96,6 +97,15 @@ BEGIN
             VALUE "LegalCopyright", "Copyright (C) 2021 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "greengrocer.exe" "\0"
             VALUE "ProductName", "greengrocer" "\0"
+=======
+            VALUE "CompanyName", "br.com.luanwertys" "\0"
+            VALUE "FileDescription", "flutter_app_cat_happy" "\0"
+            VALUE "FileVersion", VERSION_AS_STRING "\0"
+            VALUE "InternalName", "flutter_app_cat_happy" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 br.com.luanwertys. All rights reserved." "\0"
+            VALUE "OriginalFilename", "flutter_app_cat_happy.exe" "\0"
+            VALUE "ProductName", "flutter_app_cat_happy" "\0"
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,9 +1,18 @@
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:tcc/src/models/category_model.dart';
 import 'package:tcc/src/models/item_model.dart';
 import 'package:tcc/src/pages/home/repository/home_repository.dart';
 import 'package:tcc/src/pages/home/result/home_result.dart';
 import 'package:tcc/src/services/utils_services.dart';
+=======
+
+import '../../../models/category_model.dart';
+import '../../../models/item_model.dart';
+import '../../../services/utils_services.dart';
+import '../repository/home_repository.dart';
+import '../result/home_result.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 const int itemsPerPage = 6;
 

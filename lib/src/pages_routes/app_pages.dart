@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:tcc/src/pages/auth/view/sign_in_screen.dart';
-import 'package:tcc/src/pages/auth/view/sign_up_screen.dart';
 import 'package:tcc/src/pages/base/base_screen.dart';
 import 'package:tcc/src/pages/base/binding/navigation_binding.dart';
 import 'package:tcc/src/pages/cart/binding/cart_binding.dart';
@@ -24,7 +23,7 @@ abstract class AppPages {
       name: PagesRoutes.signInRoute,
     ),
     GetPage(
-      page: () => SignUpScreen(),
+      page: () => SingUpScreen(),
       name: PagesRoutes.signUpRoute,
     ),
     GetPage(

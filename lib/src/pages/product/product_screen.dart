@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:tcc/src/config/custom_colors.dart';
 import 'package:tcc/src/models/item_model.dart';
 import 'package:tcc/src/pages/base/controller/navigation_controller.dart';
 import 'package:tcc/src/pages/cart/controller/cart_controller.dart';
 import 'package:tcc/src/pages/common_widgets/quantity_widget.dart';
 import 'package:tcc/src/services/utils_services.dart';
+=======
+
+import '../../config/custom_colors.dart';
+import '../../models/item_model.dart';
+import '../../services/utils_services.dart';
+import '../base/controller/navigation_controller.dart';
+import '../cart/controller/cart_controller.dart';
+import '../commom_widgets/quantity_widget.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class ProductScreen extends StatefulWidget {
   ProductScreen({
@@ -74,7 +84,11 @@ class _ProductScreenState extends State<ProductScreen> {
                             ),
                           ),
                           QuantityWidget(
+<<<<<<< HEAD
                             suffixText: widget.item.unit,
+=======
+                            suffixText: ' ',
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                             value: cartItemQuantity,
                             result: (quantity) {
                               setState(() {

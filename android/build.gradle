@@ -1,12 +1,20 @@
 buildscript {
+<<<<<<< HEAD
     ext.kotlin_version = '1.6.21'
+=======
+    ext.kotlin_version = '1.6.10'
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:4.1.0'
+=======
+        classpath 'com.android.tools.build:gradle:7.1.2'
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -21,6 +29,11 @@ allprojects {
 rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
+<<<<<<< HEAD
+=======
+}
+subprojects {
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
     project.evaluationDependsOn(':app')
 }
 

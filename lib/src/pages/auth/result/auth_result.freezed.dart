@@ -73,13 +73,20 @@ class _$AuthResultCopyWithImpl<$Res> implements $AuthResultCopyWith<$Res> {
 }
 
 /// @nodoc
+<<<<<<< HEAD
 abstract class $SuccessCopyWith<$Res> {
   factory $SuccessCopyWith(Success value, $Res Function(Success) then) =
       _$SuccessCopyWithImpl<$Res>;
+=======
+abstract class _$$SuccessCopyWith<$Res> {
+  factory _$$SuccessCopyWith(_$Success value, $Res Function(_$Success) then) =
+      __$$SuccessCopyWithImpl<$Res>;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
   $Res call({UserModel user});
 }
 
 /// @nodoc
+<<<<<<< HEAD
 class _$SuccessCopyWithImpl<$Res> extends _$AuthResultCopyWithImpl<$Res>
     implements $SuccessCopyWith<$Res> {
   _$SuccessCopyWithImpl(Success _value, $Res Function(Success) _then)
@@ -87,12 +94,25 @@ class _$SuccessCopyWithImpl<$Res> extends _$AuthResultCopyWithImpl<$Res>
 
   @override
   Success get _value => super._value as Success;
+=======
+class __$$SuccessCopyWithImpl<$Res> extends _$AuthResultCopyWithImpl<$Res>
+    implements _$$SuccessCopyWith<$Res> {
+  __$$SuccessCopyWithImpl(_$Success _value, $Res Function(_$Success) _then)
+      : super(_value, (v) => _then(v as _$Success));
+
+  @override
+  _$Success get _value => super._value as _$Success;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
   @override
   $Res call({
     Object? user = freezed,
   }) {
+<<<<<<< HEAD
     return _then(Success(
+=======
+    return _then(_$Success(
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
       user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -118,7 +138,11 @@ class _$Success implements Success {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
+<<<<<<< HEAD
             other is Success &&
+=======
+            other is _$Success &&
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
             const DeepCollectionEquality().equals(other.user, user));
   }
 
@@ -128,8 +152,13 @@ class _$Success implements Success {
 
   @JsonKey(ignore: true)
   @override
+<<<<<<< HEAD
   $SuccessCopyWith<Success> get copyWith =>
       _$SuccessCopyWithImpl<Success>(this, _$identity);
+=======
+  _$$SuccessCopyWith<_$Success> get copyWith =>
+      __$$SuccessCopyWithImpl<_$Success>(this, _$identity);
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
   @override
   @optionalTypeArgs
@@ -197,6 +226,7 @@ class _$Success implements Success {
 abstract class Success implements AuthResult {
   factory Success(final UserModel user) = _$Success;
 
+<<<<<<< HEAD
   UserModel get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SuccessCopyWith<Success> get copyWith => throw _privateConstructorUsedError;
@@ -206,10 +236,23 @@ abstract class Success implements AuthResult {
 abstract class $ErrorCopyWith<$Res> {
   factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
       _$ErrorCopyWithImpl<$Res>;
+=======
+  UserModel get user;
+  @JsonKey(ignore: true)
+  _$$SuccessCopyWith<_$Success> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorCopyWith<$Res> {
+  factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
+      __$$ErrorCopyWithImpl<$Res>;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
   $Res call({String message});
 }
 
 /// @nodoc
+<<<<<<< HEAD
 class _$ErrorCopyWithImpl<$Res> extends _$AuthResultCopyWithImpl<$Res>
     implements $ErrorCopyWith<$Res> {
   _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
@@ -217,12 +260,25 @@ class _$ErrorCopyWithImpl<$Res> extends _$AuthResultCopyWithImpl<$Res>
 
   @override
   Error get _value => super._value as Error;
+=======
+class __$$ErrorCopyWithImpl<$Res> extends _$AuthResultCopyWithImpl<$Res>
+    implements _$$ErrorCopyWith<$Res> {
+  __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
+      : super(_value, (v) => _then(v as _$Error));
+
+  @override
+  _$Error get _value => super._value as _$Error;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
+<<<<<<< HEAD
     return _then(Error(
+=======
+    return _then(_$Error(
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
       message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -248,7 +304,11 @@ class _$Error implements Error {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
+<<<<<<< HEAD
             other is Error &&
+=======
+            other is _$Error &&
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
             const DeepCollectionEquality().equals(other.message, message));
   }
 
@@ -258,8 +318,13 @@ class _$Error implements Error {
 
   @JsonKey(ignore: true)
   @override
+<<<<<<< HEAD
   $ErrorCopyWith<Error> get copyWith =>
       _$ErrorCopyWithImpl<Error>(this, _$identity);
+=======
+  _$$ErrorCopyWith<_$Error> get copyWith =>
+      __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
   @override
   @optionalTypeArgs
@@ -327,7 +392,13 @@ class _$Error implements Error {
 abstract class Error implements AuthResult {
   factory Error(final String message) = _$Error;
 
+<<<<<<< HEAD
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ErrorCopyWith<Error> get copyWith => throw _privateConstructorUsedError;
+=======
+  String get message;
+  @JsonKey(ignore: true)
+  _$$ErrorCopyWith<_$Error> get copyWith => throw _privateConstructorUsedError;
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 }

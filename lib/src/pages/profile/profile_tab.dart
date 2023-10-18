@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:get/get.dart';
 import 'package:tcc/src/pages/auth/controller/auth_controller.dart';
 import 'package:tcc/src/pages/common_widgets/custom_text_field.dart';
 import 'package:tcc/src/services/validators.dart';
+=======
+import 'package:flutter_app_cat_happy/src/config/custom_colors.dart';
+import 'package:flutter_app_cat_happy/src/services/validators.dart';
+import 'package:get/get.dart';
+
+import '../auth/controller/auth_controller.dart';
+import '../commom_widgets/custom_text_field.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class ProfileTab extends StatefulWidget {
   const ProfileTab({Key? key}) : super(key: key);
@@ -18,6 +27,10 @@ class _ProfileTabState extends State<ProfileTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
+=======
+        backgroundColor: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
         title: const Text('Perfil do usuário'),
         actions: [
           IconButton(
@@ -72,8 +85,13 @@ class _ProfileTabState extends State<ProfileTab> {
             height: 50,
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
+<<<<<<< HEAD
                 side: const BorderSide(
                   color: Colors.green,
+=======
+                side: BorderSide(
+                  color: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
@@ -93,7 +111,11 @@ class _ProfileTabState extends State<ProfileTab> {
   Future<bool?> updatePassword() {
     final currentPasswordController = TextEditingController();
     final newPasswordController = TextEditingController();
+<<<<<<< HEAD
     final _formKey = GlobalKey<FormState>();
+=======
+    final formKey = GlobalKey<FormState>();
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
     return showDialog(
       context: context,
@@ -107,7 +129,11 @@ class _ProfileTabState extends State<ProfileTab> {
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: Form(
+<<<<<<< HEAD
                   key: _formKey,
+=======
+                  key: formKey,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisSize: MainAxisSize.min,
@@ -175,7 +201,11 @@ class _ProfileTabState extends State<ProfileTab> {
                               onPressed: authController.isLoading.value
                                   ? null
                                   : () {
+<<<<<<< HEAD
                                       if (_formKey.currentState!.validate()) {
+=======
+                                      if (formKey.currentState!.validate()) {
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                                         authController.changePassword(
                                           currentPassword:
                                               currentPasswordController.text,

@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:tcc/src/models/item_model.dart';
+import 'item_model.dart';
 
 part 'cart_item_model.g.dart';
 

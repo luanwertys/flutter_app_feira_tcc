@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import 'package:tcc/src/constants/endpoints.dart';
 import 'package:tcc/src/models/cart_item_model.dart';
 import 'package:tcc/src/models/order_model.dart';
 import 'package:tcc/src/pages/orders/orders_result/orders_result.dart';
 import 'package:tcc/src/services/http_manager.dart';
+=======
+import 'package:flutter_app_cat_happy/src/pages/orders/orders_result/orders_result.dart';
+
+import '../../../constants/endpoints.dart';
+import '../../../models/cart_item_model.dart';
+import '../../../models/order_model.dart';
+import '../../../services/http_manager.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class OrdersRepository {
   final _httpManager = HttpManager();

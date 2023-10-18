@@ -48,10 +48,17 @@ std::string Utf8FromUtf16(const wchar_t* utf16_string) {
   int target_length = ::WideCharToMultiByte(
       CP_UTF8, WC_ERR_INVALID_CHARS, utf16_string,
       -1, nullptr, 0, nullptr, nullptr);
+<<<<<<< HEAD
   if (target_length == 0) {
     return std::string();
   }
   std::string utf8_string;
+=======
+  std::string utf8_string;
+  if (target_length == 0 || target_length > utf8_string.max_size()) {
+    return utf8_string;
+  }
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
   utf8_string.resize(target_length);
   int converted_length = ::WideCharToMultiByte(
       CP_UTF8, WC_ERR_INVALID_CHARS, utf16_string,

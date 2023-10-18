@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import 'package:tcc/src/constants/endpoints.dart';
 import 'package:tcc/src/models/category_model.dart';
 import 'package:tcc/src/models/item_model.dart';
 import 'package:tcc/src/pages/home/result/home_result.dart';
 import 'package:tcc/src/services/http_manager.dart';
+=======
+import '../../../constants/endpoints.dart';
+import '../../../models/category_model.dart';
+import '../../../models/item_model.dart';
+import '../../../services/http_manager.dart';
+import '../result/home_result.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class HomeRespository {
   final HttpManager _httpManager = HttpManager();

@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:tcc/src/models/order_model.dart';
-import 'package:tcc/src/pages/auth/controller/auth_controller.dart';
-import 'package:tcc/src/pages/orders/orders_result/orders_result.dart';
-import 'package:tcc/src/pages/orders/repository/orders_repository.dart';
-import 'package:tcc/src/services/utils_services.dart';
+
+import '../../../models/order_model.dart';
+import '../../../services/utils_services.dart';
+import '../../auth/controller/auth_controller.dart';
+import '../orders_result/orders_result.dart';
+import '../repository/orders_repository.dart';
 
 class AllOrdersController extends GetxController {
   List<OrderModel> allOrders = [];

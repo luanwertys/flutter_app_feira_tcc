@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:tcc/src/config/custom_colors.dart';
 import 'package:tcc/src/models/item_model.dart';
 import 'package:tcc/src/pages/cart/controller/cart_controller.dart';
 import 'package:tcc/src/pages_routes/app_pages.dart';
 import 'package:tcc/src/services/utils_services.dart';
+=======
+
+import '../../../../config/custom_colors.dart';
+import '../../../../models/item_model.dart';
+import '../../../../pages_routes/app_pages.dart';
+import '../../../../services/utils_services.dart';
+import '../../../cart/controller/cart_controller.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class ItemTile extends StatefulWidget {
   final ItemModel item;
@@ -82,7 +91,11 @@ class _ItemTileState extends State<ItemTile> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
+<<<<<<< HEAD
                           color: CustomColors.customSwatchColor,
+=======
+                          color: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                         ),
                       ),
                       Text(
@@ -123,7 +136,11 @@ class _ItemTileState extends State<ItemTile> {
                   height: 40,
                   width: 35,
                   decoration: BoxDecoration(
+<<<<<<< HEAD
                     color: CustomColors.customSwatchColor,
+=======
+                    color: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                   ),
                   child: Icon(
                     tileIcon,

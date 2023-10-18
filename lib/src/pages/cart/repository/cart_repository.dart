@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import 'package:tcc/src/constants/endpoints.dart';
 import 'package:tcc/src/models/cart_item_model.dart';
 import 'package:tcc/src/models/order_model.dart';
 import 'package:tcc/src/pages/cart/cart_result/cart_result.dart';
 import 'package:tcc/src/services/http_manager.dart';
+=======
+import '../../../constants/endpoints.dart';
+import '../../../models/cart_item_model.dart';
+import '../../../models/order_model.dart';
+import '../../../services/http_manager.dart';
+import '../cart_result/cart_result.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class CartRepository {
   final _httpManager = HttpManager();

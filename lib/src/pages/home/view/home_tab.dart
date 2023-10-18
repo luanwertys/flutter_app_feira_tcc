@@ -3,6 +3,7 @@ import 'package:add_to_cart_animation/add_to_cart_icon.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:tcc/src/config/custom_colors.dart';
 import 'package:tcc/src/pages/base/controller/navigation_controller.dart';
 import 'package:tcc/src/pages/cart/controller/cart_controller.dart';
@@ -11,6 +12,17 @@ import 'package:tcc/src/pages/common_widgets/custom_shimmer.dart';
 import 'package:tcc/src/pages/home/controller/home_controller.dart';
 import 'package:tcc/src/pages/home/view/components/category_tile.dart';
 import 'package:tcc/src/pages/home/view/components/item_tile.dart';
+=======
+
+import '../../../config/custom_colors.dart';
+import '../../base/controller/navigation_controller.dart';
+import '../../cart/controller/cart_controller.dart';
+import '../../commom_widgets/custom_shimmer.dart';
+import '../../common_widgets/app_name_widget.dart';
+import '../controller/home_controller.dart';
+import 'components/category_tile.dart';
+import 'components/item_tile.dart';
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
 
 class HomeTab extends StatefulWidget {
   const HomeTab({Key? key}) : super(key: key);
@@ -39,7 +51,13 @@ class _HomeTabState extends State<HomeTab> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
+<<<<<<< HEAD
         title: const AppNameWidget(),
+=======
+        title: const AppNameWidget(
+          fontsize: 20,
+        ),
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
         actions: [
           Padding(
             padding: const EdgeInsets.only(
@@ -53,7 +71,11 @@ class _HomeTabState extends State<HomeTab> {
                     navigationController.navigatePageView(NavigationTabs.cart);
                   },
                   child: Badge(
+<<<<<<< HEAD
                     badgeColor: CustomColors.customContrastColor,
+=======
+                    badgeColor: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                     badgeContent: Text(
                       controller.cartItems.length.toString(),
                       style: const TextStyle(
@@ -65,7 +87,11 @@ class _HomeTabState extends State<HomeTab> {
                       key: globalKeyCartItems,
                       icon: Icon(
                         Icons.shopping_cart,
+<<<<<<< HEAD
                         color: CustomColors.customSwatchColor,
+=======
+                        color: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                       ),
                     ),
                   ),
@@ -121,7 +147,11 @@ class _HomeTabState extends State<HomeTab> {
                               },
                               icon: Icon(
                                 Icons.close,
+<<<<<<< HEAD
                                 color: CustomColors.customContrastColor,
+=======
+                                color: CustomColors.customContrastColor3,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                                 size: 21,
                               ),
                             )
@@ -190,6 +220,20 @@ class _HomeTabState extends State<HomeTab> {
                       ? Visibility(
                           visible: (controller.currentCategory?.items ?? [])
                               .isNotEmpty,
+<<<<<<< HEAD
+=======
+                          replacement: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.search_off,
+                                size: 40,
+                                color: CustomColors.customContrastColor3,
+                              ),
+                              const Text('Não há itens para apresentar'),
+                            ],
+                          ),
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                           child: GridView.builder(
                             padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                             physics: const BouncingScrollPhysics(),
@@ -198,7 +242,11 @@ class _HomeTabState extends State<HomeTab> {
                               crossAxisCount: 2,
                               mainAxisSpacing: 10,
                               crossAxisSpacing: 10,
+<<<<<<< HEAD
                               childAspectRatio: 9 / 11.5,
+=======
+                              childAspectRatio: 7.2 / 11.5,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                             ),
                             itemCount: controller.allProducts.length,
                             itemBuilder: (_, index) {
@@ -214,6 +262,7 @@ class _HomeTabState extends State<HomeTab> {
                                       itemSelectedCartAnimations);
                             },
                           ),
+<<<<<<< HEAD
                           replacement: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -225,6 +274,8 @@ class _HomeTabState extends State<HomeTab> {
                               const Text('Não há itens para apresentar'),
                             ],
                           ),
+=======
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                         )
                       : GridView.count(
                           padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
@@ -232,7 +283,11 @@ class _HomeTabState extends State<HomeTab> {
                           crossAxisCount: 2,
                           mainAxisSpacing: 10,
                           crossAxisSpacing: 10,
+<<<<<<< HEAD
                           childAspectRatio: 9 / 11.5,
+=======
+                          childAspectRatio: 7.2 / 11.5,
+>>>>>>> 2e5a433bfb7c6220855f36ca83ef04dde59040ac
                           children: List.generate(
                             10,
                             (index) => CustomShimmer(
